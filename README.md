@@ -3,7 +3,7 @@ Create Custom Plugin in Go to generate Trace Context(server Kind) and forward it
 
 ****
 
-Let's started :
+Let's start :
 
 - ### Create custom Plugin in GO 
 	First of all, there are 3 types of plugins ( for more information : https://www.krakend.io/docs/extending/ ), so we decited to create a HTTP Server Plugin( Handler plugin ) to modify the headers of each request when one of them hits the KrakenD. With simple words, as soon as a request hits the Krakend will reconstruct/modify the headers before it hist the our back-end services.
