@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  fastaApi:
+    build:
+      dockerfile: Dockerfile
+      context: ./fastAPI
+    image: rest-api:latest
+    ports:
+      - 8080:8080
+
+  krakend:
+    build:
+      dockerfile: Dockerfile
+      context: ./
+    image: traces-plugin:latest
+    ports:
+      - "8090:8080"

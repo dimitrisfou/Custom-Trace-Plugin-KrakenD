@@ -1,0 +1,75 @@
+{
+    "version": 3,
+    "workers": 1,
+    "read_timeout": "1m0s",
+    "write_timeout": "1m0s",
+    "timeout": "2000ms",
+    "server_name": "KrakenD",
+    "plugin": {
+        "pattern":".so",
+        "folder": "./plugins/"
+    },
+    "extra_config": {
+      "github_com/devopsfaith/krakend/transport/http/server/handler": {
+        "name": "TraceSpanGenerator"
+     }
+    },
+    "endpoints": [
+        {
+            "endpoint": "/healthA",
+            "method": "GET",
+            "input_headers": ["*"],
+            "timeout": "1s",
+            "extra_config":{
+                "security/cors":{
+                    "allow_origins":["*"],
+                    "allow_methods":[
+                        "GET"
+                    ],
+                    "expose_headers":["*"],
+                    "allow_headers":["*"]
+
+                }
+            },
+            "backend": [
+                {
+                    "url_pattern": "/health",
+                    "encoding": "no-op",
+                    "method":"GET",
+                    "host": [
+                        "http://x.x.x.x:8080/"
+                    ]
+                    
+                }
+            ]
+        },
+                {
+            "endpoint": "/infoA",
+            "method": "GET",
+            "input_headers": ["*"],
+            "timeout": "1s",
+            "extra_config":{
+                "security/cors":{
+                    "allow_origins":["*"],
+                    "allow_methods":[
+                        "GET"
+                    ],
+                    "expose_headers":["*"],
+                    "allow_headers":["*"]
+
+                }
+            },
+            "backend": [
+                {
+                    "url_pattern": "/info",
+                    "encoding": "no-op",
+                    "method":"GET",
+                    "host": [
+                        "http://x.x.x.x:8080/"
+                    ]
+                    
+                }
+            ]
+        }
+    ]
+}
