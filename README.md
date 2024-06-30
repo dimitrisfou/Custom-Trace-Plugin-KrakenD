@@ -3,13 +3,6 @@ Create Custom Plugin in Go to generate Trace Context(server Kind) and forward it
 
 ****
 
-**References :**
--  Generate Trace and Spand id in Go : https://opentelemetry.io/docs/instrumentation/go/getting-started/
-- Create the first custom plugin for an request headers : https://www.eventslooped.com/posts/krakend-writing-plugins/
-- Useful notes for  build such as building the plugin with the plugin-builder in Docker : https://www.krakend.io/docs/extending/writing-plugins/#plugin-builder
-- Inject Go plugin into the KrakenD config : https://www.krakend.io/docs/extending/injecting-plugins/ ,https://www.krakend.io/docs/extending/http-server-plugins/
-
-****
 Let's started :
 
 - ### Create custom Plugin in GO 
@@ -266,3 +259,13 @@ Let's started :
     ### Output logs from Krakend and fastAPI
 
     ![alt text](image.png)
+
+****
+
+**References :**
+-  Generate Trace and Spand id in Go : https://opentelemetry.io/docs/instrumentation/go/getting-started/
+- Create the first custom plugin for an request headers : https://www.eventslooped.com/posts/krakend-writing-plugins/
+- Useful notes for  build such as building the plugin with the plugin-builder in Docker : https://www.krakend.io/docs/extending/writing-plugins/#plugin-builder
+- Inject Go plugin into the KrakenD config : https://www.krakend.io/docs/extending/injecting-plugins/ ,https://www.krakend.io/docs/extending/http-server-plugins/
+
+****
