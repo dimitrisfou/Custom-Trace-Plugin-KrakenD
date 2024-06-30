@@ -118,7 +118,7 @@ Let's started :
     }
     ```
 
-- ### Create Docker file for our image with 2 layers :
+- ### Create Docker file for our image with 2 stages :
 	- one layer with : FROM golang:1.19.5-alpine3.17 as builder
 	- second layer with : FROM devopsfaith/krakend:2.2.0
 
