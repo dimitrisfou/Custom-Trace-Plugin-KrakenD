@@ -12,7 +12,7 @@ Let's start :
 
 	![Krakend Plugins](https://www.krakend.io/images/documentation/krakend-plugins.png)
 
-	Then inspired by 2 documents :
+	inspired by 2 documents :
 	- Generate Trace and Span ids in go : https://opentelemetry.io/docs/instrumentation/go/getting-started/
 	- Create custom plugin : https://www.eventslooped.com/posts/krakend-writing-plugins/
 	
