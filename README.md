@@ -139,7 +139,7 @@ Let's start :
     RUN apk add build-base
 
     # ChatGPT - build .so file to docker in macos with amd64 
-    RUN CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -buildmode=plugin -o headerModPlugin1.so headerModPlugin1.go
+    RUN CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -buildmode=plugin -o pluginServer.so pluginServer.go
 
     FROM devopsfaith/krakend:2.2.0
 
